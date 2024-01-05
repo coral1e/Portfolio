@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./icones/favicon.png" />
+    <title>Coralie Picard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+    <div id="home">
+        <header>
+            <a href="index.html">
+                <h1>Coralie Picard</h1>
+            </a>
+        </header>
+
+        <div id="whatamenu">
+            <img class="gif" src="./img/myself.gif" alt="picture of Coralie">
+
+            <ul>
+                <a href="projects.html" id="projects">
+                    <li>my projects</li>
+                </a>
+                <a href="tests.html" id="tests">
+                    <li>I tried</li>
+                </a>
+                <a href="about.html" id="about">
+                    <li>about me</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="info">
+        <h3 id="news">News</h3>
+
+        <p class="hey">Hi! <br> My name is Coralie Picard, I am a product/interaction designer from Nantes. I'll be looking for a 6 months internship from February 13th to September 1st 2023.</p>
+
+        <!-- <p class="hey"> <b> Searching for:</b></p>
+        <p class="news">An internship in Interaction Design or UX Design</p>
+        <p class="hey"> <b> Available:</b> </p>
+        <p class="news">From the 16th of December to the 26th of February</p> -->
+       
+        <ul>
+            <h3>contact me!</h3>
+            <div class="contact">
+            <li><a class="social-link mail" href="mailto:co.picard@lecolededesign.com"><img
+                        src="./icones/mail_portfolio.svg" height="40px" alt="E-mail"></a>
+                <p class="message">Send me an e-mail!</p>
+            </li>
+            <li><a class="social-link cv" href="cv_coraliepicard_en.pdf" target="_blank"><img
+                        src="./icones/cv_portfolio.svg" height="50px" alt="Mon CV"></a>
+                <p class="message">Download my CV!</p>
+            </li>
+            <li><a class="social-link insta" href="https://www.instagram.com/coral1e_des1gn" target="_blank"><img
+                        src="./icones/insta_portfolio.svg" height="50px" alt="Mon instagram"></a>
+                <p class="message">Discover my Instagram!</p>
+            </li>
+            </div>
+        </ul>
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script>
+    let home = document.getElementById('home');
+    var image = document.getElementsByClassName('gif').item(0);
+    var face = image.getAttribute("src");
+    var news = document.getElementById(info);
+
+
+
+    var largeur = window.innerWidth;
+    var size = 860;
+
+    if (largeur>size){
+        face = "./img/face_smile.jpg";
+    image.setAttribute("src", face);
+    home.addEventListener('mousemove', function (evt) {
+        var mousePos = getMousePos(home, evt);
+        var message;
+
+        if (mousePos.y > 0 && mousePos.y > mousePos.x && mousePos.y > -mousePos.x) {
+            message = "haut";
+            face = "./img/face_up.jpg";
+            image.setAttribute("src", face);
+        } else if (mousePos.x > 0 && mousePos.x > mousePos.y && mousePos.x > -mousePos.y) {
+            message = "droite";
+            face = "./img/face_right.jpg";
+            image.setAttribute("src", face);
+        } else if (mousePos.y < 0 && mousePos.y < mousePos.x && mousePos.y < -mousePos.x) {
+            message = "bas";
+            face = "./img/face_close.jpg";
+            image.setAttribute("src", face);
+        } else {
+            message = "gauche";
+            face = "./img/face_left.jpg";
+            image.setAttribute("src", face);
+        }
+    }, false);
+
+    function getMousePos(home, evt) {
+        var rect = home.getBoundingClientRect();
+        return {
+            x: evt.clientX - rect.left - rect.width / 2,
+            y: -evt.clientY + rect.top + rect.height / 2
+        }
+
+    }
+}
+
+        $(document).ready(function (){
+            $("#info").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#info").offset().top - 90
+                }, 500);
+            });
+        });
+
+</script>

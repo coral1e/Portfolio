@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./icones/favicon.png" />
+    <title>Coralie Picard : OREILLE ET TORPILLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <a href="projects.html">
+        <img class="back" src="./icones/back_o.svg" alt="going back">
+    </a>
+
+    <div id="page">
+        <div id="torpille_picture">
+
+            <div class="beautiful_title">
+                <h2>OREILLE ET TORPILLE</h2>
+                <h4>The immersive two-player arcade game</h4>
+            </div>
+
+            <div id="caption">
+                <img class="time" src="./icones/time.svg" alt="clock's icon">
+                <h4>1 Week / June 2021</h4>
+            </div>
+
+        </div>
+
+        <div id="mypartners">
+            <h3 class="titre">My partners</h3>
+            <div id="group">
+
+                <a href="https://www.instagram.com/faune_3d/" target="_blank">
+                    <div>
+                        <img src="./img/flore.png" alt="">
+                        <h4>Flore Quittet</h4>
+                        <p>Game Designer</p>
+                    </div>
+                </a>
+
+                <a href="http://neocolossus.lecolededesign.com/mfourny/mfournyportfolio/#slide01" target="_blank">
+                    <div>
+                        <img src="./img/martin.jpg" alt="">
+                        <h4>Martin Fourny</h4>
+                        <p>UI/UX Designer</p>
+                    </div>
+                </a>
+
+                <a href="http://antoinedessaint.com/" target="_blank">
+                    <div>
+                        <img src="./img/antoined.png" alt="">
+                        <h4>Antoine Dessaint</h4>
+                        <p>UI/UX Designer</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/plm.nm7/" target="_blank">
+                    <div>
+                        <img src="./img/paulm.png" alt="">
+                        <h4>Paul Maurin</h4>
+                        <p>UI/UX Designer</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="article">
+            <h3>Context</h3>
+            <p>During this week of workshop, we had to do an arcade game without any screen and with alternative
+                controllers.
+                We had to find a simple and attractive gameplay. We quickly chose to do something based on the audio.
+                And while talking, we had the idea of creating an immersive game placing our players inside a submarine.
+            </p>
+
+            <img src="./img/projects/oreilleettorpille/oreillesettorpilles2.gif" alt="gif">
+
+            <h3>Rules</h3>
+            <p>Oreille et Torpille (ear & torpedo) is a 2 player audio game. Each player has a wheel to direct their
+                radar,
+                a button to shoot torpedos, 3 LEDs to follow their torpedos' stock, and headphones to follow the game.
+                The goal is to destroy the other submarine.
+                The submarines are static but the radar turn on itself. The player has to listen to the radar, the sound
+                gets higher and higher as the radar gets
+                closer to the other submarine. When the sound is the highest, the player has to shoot with the button.
+                They have to win two rounds to win the game.
+                Each round finishes if one of the two players touches the other or if one doesn't have any torpedo left.
+            </p>
+
+            <div class="pictures">
+                <img class="pic" src="./img/projects/oreilleettorpille/affiche1.png" alt="poster of the game">
+                <img class="pic" src="./img/projects/oreilleettorpille/affiche2.png" alt="poster of the game">
+            </div>
+
+            <h3>The gameplay</h3>
+            <p>
+                Our game is based on listening and searching. It requires patience, dexterity, and speed.
+            </p>
+
+            <img class="pic" src="./img/projects/oreilleettorpille/IMG_0621.jpg.png" alt="Drawing showing the installation">
+
+            <h3>Material</h3>
+            <p>
+                - 1 arduino card Mega <br>
+                - 2 arcade buttons <br>
+                - 2 rotary encoder <br>
+                - 2 headphones <br>
+                - 6 red LEDs <br>
+                - 2 computers
+
+            </p>
+
+            <div class="pictures">
+                <img class="pic" src="./img/projects/oreilleettorpille/montage.jpg" alt="montage">
+                <img src="./img/projects/oreilleettorpille/arduino_mega.jpg" alt="arduino mega">
+                <img src="./img/projects/oreilleettorpille/arcade_bouton.jpg" alt="arcade button">
+                <img src="./img/projects/oreilleettorpille/rotary-encoder.jpg" alt="rotary encoder">
+                <img src="./img/projects/oreilleettorpille/led-rouge-diffusante-5mm.jpg" alt="led">
+            </div>
+
+            <h3>Course of the game</h3>
+            <p>
+                We placed our arcade game below a table, in the dark. The players are next to each other, separated by a
+                curtain. To start the game
+                the players have to push their buttons simultaneously two times. Then they hear a voice telling them that
+                a certain John is not able to do it
+                and they are the ones that need to save the situation, the voice quickly explains how to play and the
+                game starts. <br>
+
+                The players don't have any visuals but it's possible to follow the game thanks to the first computer.
+
+            </p>
+            <div class="pictures">
+                <img class="pic" src="./img/projects/oreilleettorpille/paul_installation.jpg" alt="installation">
+                <img class="pic" src="./img/projects/oreilleettorpille/visuels.jpg" alt="computer 1 visual">
+
+            </div>
+
+            <h3>Arduino code</h3>
+            <p>
+                The data of the encoders and buttons are captured with Arduino and then send to processing. The LEDs are also
+                managed thanks to Arduino.
+
+
+                We had to use a second computer for the player to hear the sounds. That means that both computers are
+                linked by the internet. The main code is
+                in the first computer on processing. It sends the data in real-time to the second computer to say when
+                to play which sound. <br>
+
+            </p>
+
+            <img src="./img/projects/oreilleettorpille/arduino.png" alt="computer 1 visual">
+
+            <h3>Processing code</h3>
+            <p>
+                We had to use a second computer for the player to hear the sounds. That means that both computers are
+                linked by the internet. The main code is
+                in the first computer on processing. It manages the game construction, the scores, and the sounds, and then,
+                it sends the data in real-time to
+                the second computer to say when to play which sound.
+            </p>
+
+            <img src="./img/projects/oreilleettorpille/processing.png" alt="computer 1 visual">
+
+            <h3>The sounds</h3>
+            <p>
+                All of the sounds of the game were done by Paul, he also recorded the voices. Thanks to them the game if
+                really immersive. It gives
+                precious information to the player such as what he has to do if he is losing or winning he also receive
+                the information if the opponent
+                shot in the detection zone.
+            </p>
+
+
+            <div class="sounds">
+                <div class="title_sound">
+                    <p>Introduction</p>
+                    <audio controls src="./img/projects/oreilleettorpille/sons/INTRO.wav"></audio>
+                </div>
+                <div class="title_sound">
+                    <p>Background music</p>
+                    <audio controls src="./img/projects/oreilleettorpille/sons/FOND.wav"></audio>
+                </div>
+                <div class="title_sound">
+                    <p>Fired</p>
+                    <audio controls src="./img/projects/oreilleettorpille/sons/FEU.wav"></audio>
+                </div>
+                <div class="title_sound">
+                    <p>Close</p>
+                    <audio controls src="./img/projects/oreilleettorpille/sons/NEAR.wav"></audio>
+                </div>
+                <div class="title_sound">
+                    <p>Touched</p>
+                    <audio controls src="./img/projects/oreilleettorpille/sons/TOUCHE.wav"></audio>
+                </div>
+                <div class="title_sound">
+                    <p>Explosion</p>
+                    <audio controls src="./img/projects/oreilleettorpille/sons/EXPLOSION.wav"></audio>
+                </div>
+                <div class="title_sound">
+                    <p>You lost</p>
+                    <audio controls src="./img/projects/oreilleettorpille/sons/LOSE.wav"></audio>
+                </div>
+                <div class="title_sound">
+                    <p>Only one torpedo</p>
+                    <audio controls src="./img/projects/oreilleettorpille/sons/LASTONE.wav"></audio>
+                </div>
+                <div class="title_sound">
+                    <p>You won this round</p>
+                    <audio controls src="./img/projects/oreilleettorpille/sons/WIN.wav"></audio>
+                </div>
+                <div class="title_sound">
+                    <p>You won the game</p>
+                    <audio controls src="./img/projects/oreilleettorpille/sons/VICTORY.wav"></audio>
+                </div>
+            </div>
+
+            <h3>The model</h3>
+            <p>
+                For the arcade model, we did the cockpit of a submarine with a wheel and a button that can be held in the hand.
+
+            </p>
+
+            <div class="pictures">
+                <img class="pic" src="./img/projects/oreilleettorpille/cockpitlumière.jpg" alt="cockpit">
+                <img class="pic" src="./img/projects/oreilleettorpille/montage_eclate.jpg" alt="exploded drawing of the model">
+                <img class="pic" src="./img/projects/oreilleettorpille/patron.png" alt="scheme of cockpit">
+                <img class="pic" src="./img/projects/oreilleettorpille/IMG_0565.png" alt="picture of the model">
+                <img class="pic" src="./img/projects/oreilleettorpille/IMG_0589.png" alt="picture of the model">
+                <img class="pic" src="./img/projects/oreilleettorpille/IMG_0590.png" alt="picture of the model">
+            </div>
+
+            <h3>Conclusion</h3>
+            <p>
+                This workshop has been the hardest one. We first thought that it would be easy and we pretty soon discovered the complexity 
+                and the ambition of our game. I mostly worked on the code, I wasn't sure I would be capable of finishing it but I learned a lot 
+                during this week in terms of how to code and the different connections we had to do between Arduino and processing. It was a relief 
+                to see that people trully appreciated our game.
+            </p>
+
+            <div class="pictures">
+                <img class="pic" src="./img/projects/oreilleettorpille/team.jpg" alt="cockpit">
+                <img class="pic" src="./img/projects/oreilleettorpille/team1.png" alt="exploded drawing of the model">
+               </div>
+
+            <h3>The Result</h3>
+            <iframe src="https://www.youtube.com/embed/PaR01V5n-a0" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        
+
+        <div class="button">
+            <a href="./img/projects/oreilleettorpille/Documentation/Documentation_oreilles_et_torpilles.md"
+                target="blank_"><button> Documentation in French</button></a>
+        </div>
+
+    </div>
+
+        <h3 class="h3">My other Projects</h3>
+        <div id="other_projects">
+            <a href="karo.html">
+                <div class="other">
+                    <img src="./img/projects/imgkaro.png" alt="">
+                    <h4>Karo</h4>
+                </div>
+            </a>
+
+            <a href="planup.html">
+                <div class="other">
+                    <img src="./img/projects/imgplanup.png" alt="">
+                    <h4>Planup</h4>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <footer>
+
+        <p>Copyright © 2020 Coralie Picard</p>
+
+    </footer>
+
+</body>
+
+</html>
